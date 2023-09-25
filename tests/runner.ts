@@ -17,7 +17,7 @@ export class TestRunner {
     this.tests = opts.collection;
     this.dryRun = opts.dryRun ?? false;
     this.ignoreFail = opts.ignoreFail ?? false;
-    this.callback = ({ name, success, timeElapsed }) => {
+    this.callback = ({ name, success, timeElapsed }) => opts.callback ?? {
       console.log(
         `${
           success ? "[OK]" : "[FAILED]"
