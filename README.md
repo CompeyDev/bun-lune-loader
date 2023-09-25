@@ -1,16 +1,15 @@
 # bun-luau-loader
 
-To install dependencies:
+Allows to import lua/luau files in TypeScript. Requires Lune.
 
-```bash
-bun install
+```lua
+-- module.luau
+return {
+  SomeKey = "SomeValue"
+}
 ```
 
-To run:
-
-```bash
-bun run src/index.ts
+```ts
+// index.ts
+import { SomeKey } from "./module.luau"
 ```
-
-This project was created using `bun init` in bun v1.0.0. [Bun](https://bun.sh)
-is a fast all-in-one JavaScript runtime.
